@@ -72,6 +72,7 @@ body {
 .image-dropping,
 .image-upload-wrap:hover {
     background-color: #35465d82;
+    filter: brightness(50%);
     /* border: dashed 24px #9E7A3B; */
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 .section {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .title {
@@ -183,7 +184,7 @@ body {
 }
 
 .upload {
-    width: 40%;
+    width: 30%;
 }
 
 .upload-text {
