@@ -23,6 +23,7 @@
     <meta name="naver-site-verification" content="36470b4dd409d35feeb014d791801d5486e7b893" />
     
     <meta property="og:image" content="https://raw.githubusercontent.com/jinny-develop/fruitface/main/img/graphic.png" /> 
+    <meta name="google-site-verification" content="OsPokxp6Ui8CBTtupvx8eWMwT5bmgA1liWtBRp6hyR0" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ic o" type="image/x-icon">
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
@@ -153,9 +154,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
         let URL = "https://teachablemachine.withgoogle.com/models/4n_4-OpBm/";
-        //let URL = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
-        const urlMale = "https://teachablemachine.withgoogle.com/models/o9D1N5TN/";
-        const urlFemale = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
         let model, webcam, labelContainer, maxPredictions;
         async function init() {
             const modelURL = URL + "model.json";
@@ -216,9 +214,9 @@
                 if (prediction[i].probability.toFixed(2) > 0.1) {
                     barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
                 } else if (prediction[i].probability.toFixed(2) >= 0.01) {
-                    barWidth = "4%"
+                    barWidth = "4%" // 여기 다시 한번 보기
                 } else {
-                    barWidth = "2%"
+                    barWidth = "2%" // 여기 다시 한번 보기
                 }
                 
                 var labelTitle;
@@ -245,19 +243,20 @@
                     
                 }
                 
+                // 여기 다시 한번 보기
                 str += "<div class='result_list_wrap'>"
                 str += "<div class='result_" + prediction[i].className + "'>" + labelTitle + "</div>"
                 str += "<div class='result_font_" + prediction[i].className + "'>" + barWidth + "</div></div>" 
                 
                 if(i==3){
                     str += "</div>"
-                                    labelContainer.childNodes[i].innerHTML = str
+                    labelContainer.childNodes[i].innerHTML = str
                 }
                 
             }
         }
     </script>
-    <script>
+    <!-- <script>
         function iosApp() {
             document.getElementById("coupang").style.display="none";
             $("#coupang ins").hide();
@@ -273,7 +272,7 @@
             document.getElementById("yotube-mid-link").style.display="none";
             document.getElementById("yotube-bottom-link").style.display="none";
         }
-    </script>
+    </script> -->
         </div>
 </body>
 <!-- 
